@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <title>NUEVA SOLICITUD</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/css_bootstrap-datetimepicker.css" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="container" style="padding: 2% 8%">
+                <center><img src="img/logo.png" width="70%"></center>
+                <form method="post" action="" onsubmit="app.login();return false;">
+                  <h4>NUEVA SOLICITUD</h4><br>
+                  <div class="form-group">
+                    <label for="tipo">TIPO DE SOLICITUD</label>
+                    <!--<input type="email" class="form-control" id="correo" name="correo" aria-describedby="emailHelp" placeholder="Ingrese su correo electrónico" />-->
+                    <select id="tipo" name="tipo" class="form-control" >
+                        <option value="1">PAGO DE RECIBO</option>
+                        <option value="2">CONSIGNACIÓN</option>
+                        <option value="3">ACOMPAÑAMIENTO</option>
+                        <option value="4">COTIZAR</option>
+                        <option value="5">DOMICILIO</option>
+                        <option value="6">HACER FILA</option>
+                        <option value="7">LLEVAR O RECOGER PERSONAS</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="ciudad">CIUDAD</label>
+                    <!--<input type="email" class="form-control" id="correo" name="correo" aria-describedby="emailHelp" placeholder="Ingrese su correo electrónico" />-->
+                    <select id="ciudad" name="ciudad" class="form-control" >
+                        <option value="1">BOGOTÁ</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="telefono">TELÉFONO DE CONTACTO</label>
+                    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Número celular ó fijo" aria-describedby="telefonoHelp"/>
+                    <!--<small id="telefonoHelp" class="form-text text-muted">Escriba un número real donde podamos comunicarnos con usted.</small>-->
+                  </div>
+                  <div class="form-group">
+                    <label for="fechaHora">FECHA Y HORA</label>
+                    <input type="text" class="form-control" autocomplete="off"  id="fechaHora" name="fechaHora" placeholder="Seleccione la fecha" aria-describedby="fechaHelp"/>
+                    <small id="fechaHelp" class="form-text text-muted">Fecha del servicio.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="descripcion">DESCRIPCIÓN DEL SERVICIO</label>
+                    <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Seleccione la fecha" aria-describedby="descHelp"></textarea>
+                    <small id="descHelp" class="form-text text-muted">Breve descripción del servicio.</small>
+                  </div>
+                  <input type="hidden" class="form-control" id="lat" name="lat"/>
+                  <input type="hidden" class="form-control" id="lon" name="lon"/>
+                  <button type="submit" class="btn btn-primary btn-block" style="padding: 3%">ENVIAR SOLICITUD</button>
+                  <a href="home.html" class="btn btn-danger btn-block" style="padding: 3%">CANCELAR</a>
+                </form>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/moment.js"></script>
+        <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.startGPS();
+            app.startApp();
+            if(localStorage['sesion'] == undefined)
+            {
+                document.location = 'index.html';
+            }
+        </script>
+    </body>
+</html>
