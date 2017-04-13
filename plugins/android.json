@@ -14,15 +14,18 @@
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
         "cordova-plugin-globalization": {
-            "PACKAGE_NAME": "mandados.wannabe.com.co"
+            "PACKAGE_NAME": "io.cordova.hellocordova"
         },
         "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-plugin-spinner": {
             "PACKAGE_NAME": "mandados.wannabe.com.co"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "mandados.wannabe.com.co"
+            "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     }
 }

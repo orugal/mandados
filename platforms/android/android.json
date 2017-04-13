@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"Geolocation\"><param name=\"android-package\" value=\"org.apache.cordova.geolocation.Geolocation\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SpinnerPlugin\"><param name=\"android-package\" value=\"net.justin_credible.cordova.SpinnerPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -61,6 +65,9 @@
             "PACKAGE_NAME": "mandados.wannabe.com.co"
         },
         "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "mandados.wannabe.com.co"
+        },
+        "cordova-plugin-spinner": {
             "PACKAGE_NAME": "mandados.wannabe.com.co"
         }
     },
@@ -105,6 +112,13 @@
             "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
             "id": "cordova-plugin-geolocation.PositionError",
             "runs": true
+        },
+        {
+            "file": "plugins/cordova-plugin-spinner/www/spinner-plugin.js",
+            "id": "cordova-plugin-spinner.SpinnerPlugin",
+            "clobbers": [
+                "SpinnerPlugin"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -112,6 +126,7 @@
         "cordova-plugin-dialogs": "1.3.2",
         "cordova-plugin-globalization": "1.0.6",
         "cordova-plugin-compat": "1.1.0",
-        "cordova-plugin-geolocation": "2.4.2"
+        "cordova-plugin-geolocation": "2.4.2",
+        "cordova-plugin-spinner": "1.1.0"
     }
 }
